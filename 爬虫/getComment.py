@@ -9,8 +9,8 @@ import time
 import json
 
 # 预配置参数，此处由使用者自己填写
-my_username = '18827070643'
-my_password = 'huyi3313825833'
+my_username = ''
+my_password = ''
 dst_id = '1005052805895234'  #进入目标主页，查看目标粉丝，url里面的id即为dst_id
 
 logfile = open('log.html', 'w', encoding='utf-8')
