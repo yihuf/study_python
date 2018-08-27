@@ -153,7 +153,7 @@ for follower in followers:
         for i in range(1,50):
             url = "https://weibo.com/aj/v6/comment/big?ajwvr=6&id=%s&root_comment_max_id_type=0" \
                   "&root_comment_ext_param=&page=%d&filter=hot&from=singleWeiBo" % (mid, i)
-            print(url)
+            print(len(final_result), url)
             try:
                 mypage = urllib.request.urlopen(url)
             except:
