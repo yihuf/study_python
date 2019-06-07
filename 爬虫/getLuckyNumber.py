@@ -67,8 +67,30 @@ def get_lucky_number(history_list):
         blue_res += res[6:7]
     print(red_res)
     print(blue_res)
+    red_res_count = {}
+    blue_res_count = {}
+    for key in red_res:
+        if not red_res_count.has_key(key):
+            red_res_count[key] = 1
+        else:
+            red_res_count[key] += 1
+
+    for key in blue_res:
+        if not blue_res_count.has_key(key):
+            blue_res_count[key] = 1
+        else:
+            blue_res_count[key] += 1
+
+    sorted_red_res_count = sorted(red_res_count.items(), key=lambda red_res_count: red_res_count[1])
+    sorted_blue_res_count = sorted(blue_res_count.items(), key=lambda blue_res_count: blue_res_count[1])
+    print(sorted_red_res_count)
+    print(sorted_blue_res_count)
+
+    print(sorted([item[0] for item in sorted_red_res_count[:6]]))
+    print([item[0] for item in sorted_blue_res_count[:1]])
+
 # 获取最近50次结果中出现次数最少的号码
-get_lucky_number(all_result[:2])
+get_lucky_number(all_result[:50])
 # 获取最近100次结果中出现次数最少的号码
 
 # 获取最近150次结果中出现次数最少的号码
