@@ -1,3 +1,10 @@
-a = ['a', '123']
+import os
 
-print(str(a))
+for fpathe,dirs,fs in os.walk('e:\\test'):
+    print(fs)
+    print(fpathe)
+    print(dirs)
+    print('----------------------')
+
+
+
